@@ -4,14 +4,22 @@ $apikey = "74afaadd7ffa8a725bd2586afa22ba17";
 
 
 // رابط الـ API
-$api_url = "https://api.tikwmapi.com/?url=" . urlencode($urltiktok) . "&hd=1&api_key=" . $apikey;
+$api_url = "https://api.tikwmapi.com/?url=" . urlencode($urltiktok) . "&hd=1;
 
 // تهيئة cURL
 $ch = curl_init();
 
-// إعدادات cURL
-curl_setopt($ch, CURLOPT_URL, $api_url);
+curl_setopt($ch, CURLOPT_URL, $apiurl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+// 🔥 هنا نرسل المفتاح في الهيدر
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    "x-api-key: " . $apikey
+]);
+
+$response = curl_exec($ch);
+
+curl_close($ch);
 
 // إرسال الطلب
 $response = curl_exec($ch);
