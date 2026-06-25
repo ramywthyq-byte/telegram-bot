@@ -26,6 +26,6 @@ $data = json_decode($response, true);
 echo "<pre>";
 print_r($data);
 echo "</pre>";
-echo $api_key;
+echo $apikey;
 exit;
 ?>
