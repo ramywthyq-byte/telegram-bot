@@ -4,7 +4,7 @@ $apikey = "74afaadd7ffa8a725bd2586afa22ba17";
 
 
 // رابط الـ API
-$api_url = "https://api.tikwmapi.com/?url=" . urlencode($urltiktok) . "&hd=1;
+$apiurl = "https://api.tikwmapi.com/?url=" . urlencode($urltiktok) . "&hd=1;
 
 // تهيئة cURL
 $ch = curl_init();
