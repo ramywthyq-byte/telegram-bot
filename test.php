@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 $urltiktok = "https://vt.tiktok.com/ZSC2EShTm/";
 $apikey = "74afaadd7ffa8a725bd2586afa22ba17";
 
-$apiurl = "https://api.tikwm.com/?" . http_build_query([
+$apiurl = "https://api.tikwmapi.com/?" . http_build_query([
     'url'   => $urltiktok,
     'hd'    => 1,
     'token' => $apikey
@@ -21,13 +21,11 @@ $response = curl_exec($ch);
 $curl_error = curl_error($ch);
 curl_close($ch);
 
-// اطبع الخطأ إذا في
 if ($curl_error) {
     echo "cURL Error: " . $curl_error;
     exit;
 }
 
-// اطبع الرد الخام قبل التحويل
 echo "Raw Response: " . $response . "<br><br>";
 
 $data = json_decode($response, true);
