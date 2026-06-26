@@ -26,7 +26,9 @@
 
     $reselt = curl_exec($ch);
     curl_close($ch);
-    echo $reselt;
+    echo "<pre>";
+    echo htmlspecialchars($reselt);
+    echo "</pre>";
 
 
 
