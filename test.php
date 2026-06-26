@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 $urltiktok = "https://vt.tiktok.com/ZSC2EShTm/";
-$apikey = "74afaadd7ffa8a725bd2586afa22ba17";
+$apikey = "7f66b6ac908d5c3b266c30c62f87b9c5";
 
 $apiurl = "https://api.tikwmapi.com/?" . http_build_query([
     'url'   => $urltiktok,
